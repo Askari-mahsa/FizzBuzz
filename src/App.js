@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./Counter";
+import useFizzBuzz from "./useFizzBuzz";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const fizzBuzz1 = useFizzBuzz({ x: 1, n: 3, m: 5 });
+	const fizzBuzz2 = useFizzBuzz({ x: 10, n: 17, m: 7 });
+	return (
+		<div>
+			<Counter {...fizzBuzz1} />
+			<Counter {...fizzBuzz2} />
+		</div>
+	);
 }
 
 export default App;
